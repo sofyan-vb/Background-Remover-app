@@ -1,0 +1,77 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+
+body, #root {
+  background-color: transparent;
+}
+
+.video-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+  filter: brightness(0.5);
+}
+
+
+
+.animasi-gradasi, .animasi-bingkai-berjalan {
+  background-size: 300% 300%;
+  animation: gerak-gradasi 4s ease-in-out infinite;
+}
+
+@keyframes gerak-gradasi {
+  0%, 100% {
+    background-position: left center;
+  }
+  50% {
+    background-position: right center;
+  }
+}
+
+
+
+.checkerboard-background {
+  background-image:
+    linear-gradient(45deg, #ccc 25%, transparent 25%),
+    linear-gradient(-45deg, #ccc 25%, transparent 25%),
+    linear-gradient(45deg, transparent 75%, #ccc 75%),
+    linear-gradient(-45deg, transparent 75%, #ccc 75%);
+  background-size: 20px 20px;
+  background-position: 0 0, 0 10px, 10px -10px, -10px 0px;
+}
+
+
+.blinking-glow-effect {
+  animation: pulsing-gray-glow 2s infinite ease-in-out;
+}
+
+
+.active-glow-gray {
+  animation: pulsing-gray-glow 2s infinite ease-in-out;
+}
+
+
+.active-glow-purple {
+  animation: pulsing-purple-glow 2s infinite ease-in-out;
+}
+
+
+@keyframes pulsing-gray-glow {
+  0%   { box-shadow: 0 0 5px #04ffea; }
+  50%  { box-shadow: 0 0 20px #14ebff, 0 0 25px #44deef; }
+  100% { box-shadow: 0 0 5px #37deff; }
+}
+
+
+@keyframes pulsing-purple-glow {
+  0%   { box-shadow: 0 0 5px #c73bf6; }
+  50%  { box-shadow: 0 0 20px #d400ff, 0 0 25px #ea00ff; }
+  100% { box-shadow: 0 0 5px #cc00ff; }
+}
