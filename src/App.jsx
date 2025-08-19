@@ -49,7 +49,7 @@ const BackgroundRemover = () => {
         data: formData,
         responseType: 'arraybuffer',
         headers: {
-          'X-Api-Key': 'UyHVSpgmKjRCTbsF8ACZ5fh1', 
+          'X-Api-Key': 'Bbx6yckxVGsreuRQiR3XHgWt', 
         },
       });
 
